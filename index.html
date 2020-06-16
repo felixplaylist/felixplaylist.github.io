@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Felix's Playlist</title>
+    <title id="title">Felix's Playlist</title>
     <meta charset="UTF-8">
     <meta name="description" content="My Online Playlist">
     <meta name="keywords" content="playlist">
@@ -22,6 +22,15 @@
     </style>
 </head>
 <body>
+    <h1 id="maintitle">This is the title</h1>
+    <button onclick="changeTitle()">Click me</button>
+    <script>
+        function changeTitle() {
+            var newTitle = prompt('What will the title be?');
+            var newTitleTarget = document.getElementById("title");
+            newTitleTarget.innerHTML = newTitle;
+        }
+    </script>
     <h1 style="text-align:center">Felix's Playlist</h1>
     <div style="background:#8ea4b9;border-radius:25px">
         <h2>Level of Concern:</h2>
